@@ -1,0 +1,86 @@
+<!-- <% if(success && success.length) { %>
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <%= success %>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <% } %>
+
+
+        <% if(error && error.length) { %>
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <%= error %>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <% } %> -->
+
+
+
+<style>
+    .success-message {
+        position: relative;
+        padding: 20px;
+        background-color: #4CAF50;
+        color: white;
+        border-radius: 4px;
+        margin-bottom: 20px;
+    }
+
+    .close-button {
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        color: white;
+        cursor: pointer;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .close-buttonerr {
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        color: white;
+        cursor: pointer;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .error-message {
+        position: relative;
+        padding: 20px;
+        background-color: #f44336;
+        color: white;
+        border-radius: 4px;
+        margin-bottom: 20px;
+    }
+</style>
+
+
+<% if(success && success.length) { %>
+    <div class="success-message">
+        <%= success %>
+        <span class="close-button">&times;</span>
+    </div>
+    <% } %>
+
+<% if(error && error.length) { %>
+        <div class="error-message">
+            <%= error %>
+            <span class="close-buttonerr">&times;</span>
+        </div>
+        <% } %>
+
+        <script>
+            // Función para cerrar el mensaje al hacer clic en el botón de cerrar
+            document.querySelector('.close-button').addEventListener('click', function () {
+                document.querySelector('.success-message').style.display = 'none';
+            });
+    
+        </script>
+    
+        <script>
+    
+            document.querySelector('.close-buttonerr').addEventListener('click', function () {
+                document.querySelector('.error-message').style.display = 'none';
+            });
+        </script>

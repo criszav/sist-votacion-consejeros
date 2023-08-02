@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/pages.css">
+    <title>Consejeros Electos</title>
+</head>
+<header>
+    <div class="logoimg">
+        <img src="https://www.duoc.cl/wp-content/themes/wordpress-duoc-cl/images/logo-duoc.svg" width="200" height="50">
+    </div>
+    <a href="/logout"><input type="button" value="Cerrar Sesion" class="btn-logout"></a>
+</header>
+
+<body>
+    <div class="contenido">
+        <div class="wrapper">
+            <nav class="sidebar">
+                <ul>
+                    <li>
+                        <a href="/inicio" class="">
+                            <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                    fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5Z" />
+                                </svg></span>
+                            <span class="item">Inicio</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/inicio/postular" class="">
+                            <span class="icon"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                    fill="currentColor" class="bi bi-person-plus-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                                    <path fill-rule="evenodd"
+                                        d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z" />
+                                </svg></span>
+                            <span class="item">Postular</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/inicio/postulantes" class="">
+                            <span class="icon"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                    fill="currentColor" class="bi bi-list-ul" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm-3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+                                </svg></span>
+                            <span class="item">Lista de postulantes</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/inicio/votar" class="">
+                            <span class="icon"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                    fill="currentColor" class="bi bi-box2-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M3.75 0a1 1 0 0 0-.8.4L.1 4.2a.5.5 0 0 0-.1.3V15a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V4.5a.5.5 0 0 0-.1-.3L13.05.4a1 1 0 0 0-.8-.4h-8.5ZM15 4.667V5H1v-.333L1.5 4h6V1h1v3h6l.5.667Z" />
+                                </svg></span>
+                            <span class="item">Votar</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/inicio/resultados" class="">
+                            <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                    fill="currentColor" class="bi bi-ui-checks" viewBox="0 0 16 16">
+                                    <path
+                                        d="M7 2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5v-1zM2 1a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2zm0 8a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2H2zm.854-3.646a.5.5 0 0 1-.708 0l-1-1a.5.5 0 1 1 .708-.708l.646.647 1.646-1.647a.5.5 0 1 1 .708.708l-2 2zm0 8a.5.5 0 0 1-.708 0l-1-1a.5.5 0 0 1 .708-.708l.646.647 1.646-1.647a.5.5 0 0 1 .708.708l-2 2zM7 10.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5v-1zm0-5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 8a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z" />
+                                </svg></span>
+                            <span class="item">Resultados</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/inicio/consejeros-electos" class="active">
+                            <span class="icon"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                    fill="currentColor" class="bi bi-person-fill-check" viewBox="0 0 16 16">
+                                    <path
+                                        d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm1.679-4.493-1.335 2.226a.75.75 0 0 1-1.174.144l-.774-.773a.5.5 0 0 1 .708-.708l.547.548 1.17-1.951a.5.5 0 1 1 .858.514ZM11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                    <path
+                                        d="M2 13c0 1 1 1 1 1h5.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.544-3.393C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4Z" />
+                                </svg></span>
+                            <span class="item">Consejeros Electos</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="container1">
+            <h2>Consejeros Electos</h2>
+
+
+            <% if (votacionAlumno.activa) { %>
+
+                <br>
+                <div class="notificacion-container">
+                    <h2>¡Votación activa!</h2>
+                    <p>Aún no se ha cerrado el conteo de votos.</p>
+                </div>
+
+                <% } else { %>
+
+                    <div class="personas-list">
+
+                        <ul class="item-list">
+                            <% for(consejero of consejeros) { %>
+                                <li class="<%= consejero.id%>">
+                                    <div class="persona-seg">
+                                        <div class="avatar-seg">
+                                            <img src="<%= consejero.url_img %>" alt="Avatar">
+                                        </div>
+
+                                        <div class="seg-info">
+                                            <h3>
+                                                <%= consejero.nombre %>
+                                                    <%= consejero.apellido %>
+                                            </h3>
+                                            <p>
+                                                <b>Correo: </b> <%= consejero.correo %>
+                                            </p>
+
+                                            <p>
+                                                <b>Teléfono: </b> <%= consejero.telefono %>
+                                            </p>
+
+                                            <p>
+                                                <b>Carrera: </b> <%= consejero.carrera %>
+                                            </p>
+
+                                        </div>
+
+                                    </div>
+                                </li>
+                                <% } %>
+                        </ul>
+
+                    </div>
+                    <% } %>
+
+        </div>
+    </div>
+    <script src="/js/script.js"></script>
+</body>
+
+<%- include('../partials/footer') %>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="../css/login.css">
+  <title>Login</title>
+</head>
+<header>
+  <div class="header">
+    <center><img src="https://www.duoc.cl/wp-content/themes/wordpress-duoc-cl/images/logo-duoc.svg" width="400"
+        height="110" class="imglogo"></center>
+  </div>
+</header>
+
+<body>
+  <br>
+  <div class="div-title">
+  <center>
+    <h2 class="title1"> Sistema de Votación de Consejeros de Carrera</h2>
+  </center>
+</div>
+  <div class="contenedor" align="center">
+
+    <div class="container">
+        <center><h2>Seleccione Carrera y Jornada</h2></center>
+        <form action="/inicio/carrera-jornada" method="post">
+          <div class="form-group">
+            <label for="name">Carrera</label>
+            <select id="agileinfo_search" name="carrera" required="" style="max-width: 1000px;">
+                        <option value="" disabled selected>Seleccionar Carrera</option>
+            <% for (carrera of carreras) { %>
+						  <option value="<%=carrera.id%>"> <%= carrera.carrera %> </option>
+            <% } %>
+						</select>
+          </div>
+
+          <div class="form-group">
+            <label for="last_name">Jornada</label>
+            <select id="agileinfo_search" name="jornada" required="" style="max-width: 1000px;">
+                        <option value="" disabled selected>Seleccionar Jornada</option>
+                        <% for (jornada of jornadas) { %>
+                          <option value="<%=jornada.id%>"> <%= jornada.jornada %> </option>
+                        <% } %>
+						</select>
+          </div>
+
+          <div class="form-group">
+            <button type="submit">Continuar</button>
+          </div>
+        </form>
+      </div>
+
+  </div>
+
+</body>
+
+<!-- <footer>
+
+</footer> -->
+
+</html>

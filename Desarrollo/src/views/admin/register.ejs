@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="/css/register.css">
+  <title>Nuevo Director</title>
+</head>
+<header>
+  <div class="logoimg">
+    <img src="https://www.duoc.cl/wp-content/themes/wordpress-duoc-cl/images/logo-duoc.svg" width="200" height="50">
+  </div>
+  <a href="/logout"><input type="button" value="Cerrar Sesion" class="btn-logout"></a>
+</header>
+
+<body>
+
+  <div class="wrapper">
+    <nav class="sidebar">
+      <ul>
+        <li>
+          <a href="/inicioAdmin/register" class="active">
+            <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-person-plus-fill" viewBox="0 0 16 16">
+                <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                <path fill-rule="evenodd"
+                  d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z" />
+              </svg></span>
+            <span class="item">Nuevo</span>
+          </a>
+        </li>
+        <li>
+          <a href="/inicioAdmin/administradores">
+            <span class="icon"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-list-ul" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm-3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+              </svg></span>
+            <span class="item">Listado Directores</span>
+          </a>
+        </li>
+        <li>
+          <a href="/inicioAdmin/votaciones">
+            <span class="icon"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-list-ul" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm-3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+              </svg></span>
+            <span class="item">Votaciones</span>
+          </a>
+        </li>
+        <li>
+          <a href="/inicioAdmin/consejeros">
+            <span class="icon"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-list-ul" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm-3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+              </svg></span>
+            <span class="item">Consejeros</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+
+  <div class="container">
+    <%- include('../partials/flash') %>
+      <h2>Nuevo Director</h2>
+      <form id="form" action="/inicioAdmin/register" method="POST">
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Ej: ejemplo@duocuc.cl" autofocus required>
+        </div>
+
+        <div class="form-group">
+          <label for="escuela">Escuela</label>
+          <select class="select-escuela" id="select-escuela" name="escuela" required>
+            <option value="" disabled selected>Seleccionar escuela</option>
+            <% for(escuela of escuelas) { %>
+              <option value="<%= escuela.id %>">
+                <%= escuela.escuela %>
+              </option>
+              <% } %>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <button type="submit" onclick="confirmar(event)" class="btnRegistrar">Registrar</button>
+        </div>
+      </form>
+  </div>
+
+  <script>
+    function confirmar(event) {
+      // Detenemos el envio del formulario.
+      event.preventDefault();
+      // Mostramos la alerta con las opciones "Confirmar" y "Rechazar".
+      if (confirm("¿Estas seguro que desea registrar director?")) {
+        // Si se selecciona "Confirmar", enviamos el formulario.
+        document.getElementById("form").submit();
+      } else {
+        // Si se selecciona "Rechazar", no hacemos nada.
+      }
+    }
+  </script>
+</body>
+
+<footer>
+
+</footer>
+
+</html>
